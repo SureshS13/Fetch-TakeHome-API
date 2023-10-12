@@ -10,13 +10,15 @@ This is the README for the Fetch Takehome API, a service designed to process rec
 
 ### How to Run
 
-1. **Pull the Docker Image**: To run the Fetch Takehome API using a Docker container, pull the Docker image from Docker Hub by running the following command in your terminal:
+1. **Clone the Repository**: Clone the project from my GitHub repository (attached at the bottom of this README) to your machine, and open the folder containing the project files in your preferred IDE
+
+2. **Pull the Docker Image**: To run the Fetch Takehome API using a Docker container, pull the Docker image from Docker Hub by running the following command in your terminal:
 
    ```bash
    docker pull sureshs13/fetch_takehome_api
     ```
 
-2. **Run the Docker Container**: Once the image is successfully pulled, you can run the application in a Docker container. Use the following command:
+3. **Run the Docker Container**: Once the image is successfully pulled, you can run the application in a Docker container. Use the following command:
 
    ```bash
    docker run -p 8000:8080 sureshs13/fetch_takehome_api
