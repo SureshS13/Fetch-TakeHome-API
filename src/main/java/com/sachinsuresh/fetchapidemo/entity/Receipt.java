@@ -1,17 +1,5 @@
 package com.sachinsuresh.fetchapidemo.entity;
 
-/*
-{
-    "retailer": "Target",
-    "purchaseDate": "2022-01-02",
-    "purchaseTime": "13:13",
-    "total": "1.25",
-    "items": [
-        {"shortDescription": "Pepsi - 12-oz", "price": "1.25"}
-    ]
-}
- */
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,7 +13,6 @@ import java.util.List;
 @Entity
 public class Receipt {
 
-    // Creates an auto generated ID for each receipt inputted
     @Id
     @GeneratedValue
     private Long ID;
@@ -37,4 +24,11 @@ public class Receipt {
 
     @OneToMany(mappedBy = "receipt", cascade = CascadeType.ALL)
     private List<Item> items;
+
+    public Receipt(String retailer, String purchaseDate, String purchaseTime, double total){
+        this.retailer = retailer;
+        this.purchaseDate = purchaseDate;
+        this.purchaseTime = purchaseTime;
+        this.total = total;
+    }
 }
