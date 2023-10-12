@@ -22,4 +22,10 @@ public class Item {
     @ManyToOne
     @JoinColumn(name = "receipt_id")
     private Receipt receipt;
+
+    public Item(String shortDescription, double price, Receipt receipt) {
+        this.shortDescription = shortDescription;
+        this.price = price;
+        this.receipt = receipt;
+    }
 }
